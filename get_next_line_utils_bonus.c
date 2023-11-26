@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trosinsk <trosinsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 03:51:18 by trosinsk          #+#    #+#             */
-/*   Updated: 2023/11/25 23:03:50 by trosinsk         ###   ########.fr       */
+/*   Created: 2023/11/21 16:36:56 by trosinsk          #+#    #+#             */
+/*   Updated: 2023/11/25 23:03:03 by trosinsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {
@@ -22,7 +22,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	{
 		s1 = malloc(sizeof(char) + 1);
 		if (!s1)
-			return (0);
+			return (free(s1), s1 = NULL, NULL);
 		s1[0] = '\0';
 	}
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
