@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trosinsk <trosinsk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:36:56 by trosinsk          #+#    #+#             */
-/*   Updated: 2023/11/25 23:03:03 by trosinsk         ###   ########.fr       */
+/*   Updated: 2024/06/25 11:18:13 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "../include/get_next_line_bonus.h"
 
 char	*ft_strjoin(char *s1, char *s2)
 {
