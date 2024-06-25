@@ -6,11 +6,59 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:37:39 by trosinsk          #+#    #+#             */
-/*   Updated: 2024/06/25 11:19:13 by codespace        ###   ########.fr       */
+/*   Updated: 2024/06/25 11:50:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/get_next_line_bonus.h"
+#include "../include/get_next_line.h"
+
+/**
+ * @file get_next_line_bonus.c
+ * @brief Implementation of the get_next_line function with bonus features.
+ */
+
+/**
+ * @brief Extracts the remaining line from a given string.
+ *
+ * This function takes a string as input and returns the remaining line 
+ * after the first newline character. It uses the ft_substr 
+ * function to extract the remaining line.
+ *
+ * @param str The input string.
+ * @return The remaining line after the first newline character, or 
+ * NULL if an error occurs.
+ */
+
+/**
+ * @brief Creates a new line from a given string.
+ *
+ * This function takes a string as input and returns a new line containing 
+ * the characters up to and including the first newline character.
+ * It uses the ft_substr function to create the new line.
+ *
+ * @param str The input string.
+ * @return The new line containing the characters up to and including 
+ * the first newline character, or NULL if an error occurs.
+ */
+
+/**
+ * @brief Reads the next line from a file descriptor.
+ *
+ * This function reads the next line from the file descriptor specified 
+ * by `fd`.It uses a static array `str` to store the remaining content 
+ * of each file descriptor. The function reads data from the file descriptor
+ * in chunks of size `BUFFER_SIZE` and appends it to `str[fd]`. 
+ * If a newline character is found in `str[fd]`, the function extracts 
+ * the line using `line_maker` and updates `str[fd]` using `l_c`.
+ * The function continues reading until the end of the file or 
+ * an error occurs. If the end of the file is reached and there is 
+ * remaining content in `str[fd]`, the function returns the remaining 
+ * content as a line.
+ *
+ * @param fd The file descriptor to read from.
+ * @return The next line from the file descriptor, or NULL if an error 
+ * occurs or the end of the file is reached.
+ */
 
 char	*l_c(char *str)
 {
