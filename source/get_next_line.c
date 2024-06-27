@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: trosinsk <trosinsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:37:39 by trosinsk          #+#    #+#             */
-/*   Updated: 2024/06/25 11:50:15 by codespace        ###   ########.fr       */
+/*   Updated: 2024/06/28 01:00:03 by trosinsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @brief Extracts the remaining line from a given string.
  *
  * This function takes a string as input and returns the remaining line 
- * after the first newline character. It uses the ft_substr 
+ * after the first newline character. It uses the gnl_substr 
  * function to extract the remaining line.
  *
  * @param str The input string.
@@ -34,7 +34,7 @@
  *
  * This function takes a string as input and returns a new line containing 
  * the characters up to and including the first newline character.
- * It uses the ft_substr function to create the new line.
+ * It uses the gnl_substr function to create the new line.
  *
  * @param str The input string.
  * @return The new line containing the characters up to and including 
@@ -64,8 +64,8 @@ char	*l_c(char *str)
 {
 	char	*rest_line;
 
-	rest_line = ft_substr(str, ((ft_strchr(str, '\n') - str) + 1),
-			ft_strlen(str));
+	rest_line = gnl_substr(str, ((gnl_strchr(str, '\n') - str) + 1),
+			gnl_strlen(str));
 	if (!rest_line)
 		return (NULL);
 	return (free(str), rest_line);
@@ -75,11 +75,12 @@ char	*line_maker(char *str)
 {
 	char	*new_line;
 
-	new_line = ft_substr(str, 0, ((ft_strchr(str, '\n') - str) + 1));
+	new_line = gnl_substr(str, 0, ((gnl_strchr(str, '\n') - str) + 1));
 	if (!new_line)
 		return (NULL);
 	return (new_line);
 }
+
 
 char	*get_next_line(int fd)
 {
@@ -97,14 +98,15 @@ char	*get_next_line(int fd)
 		if (r == -1 || (r == 0 && str[fd] == NULL))
 			return (free(str[fd]), str[fd] = NULL, NULL);
 		buff[r] = '\0';
-		str[fd] = ft_strjoin(str[fd], buff);
-		if (ft_strchr(str[fd], '\n'))
+		str[fd] = gnl_strjoin(str[fd], buff);
+		if (gnl_strchr(str[fd], '\n'))
 			return (line = line_maker(str[fd]), str[fd] = l_c(str[fd]), line);
 	}
 	if (r == 0 && *str[fd])
 	{
-		line = ft_strdup(str[fd]);
+		line = gnl_strdup(str[fd]);
 		return (free(str[fd]), str[fd] = NULL, line);
 	}
 	return (free(str[fd]), str[fd] = NULL, NULL);
+	return (0);
 }
