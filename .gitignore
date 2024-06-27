@@ -1,0 +1,33 @@
+# Dependency directories
+node_modules/
+vendor/
+
+# Compiled source code
+*.exe
+*.dll
+*.class
+
+# Build output directories
+/bin/
+/build/
+/dist/
+
+# System files and editor temporary files
+.DS_Store
+Thumbs.db
+*.swp
+
+# Environment files and sensitive information
+.env
+secrets.yml
+
+# Ignore all hidden files
+.*
+
+#Ignore mini_libft folder
+mini_libft/
+main.c
+main.o
+
+# But keep the .gitignore file
+!/.gitignore
