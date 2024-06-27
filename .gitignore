@@ -28,6 +28,7 @@ secrets.yml
 mini_libft/
 main.c
 main.o
+get_next_line_test
 
 # But keep the .gitignore file
 !/.gitignore
