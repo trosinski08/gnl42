@@ -1,5 +1,4 @@
-cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 main.c ./bonus/get_next_line_bonus.c ./mini_libft/get_next_line_utils.c -o get_next_line_test
-NAME = gnl
+= gnl
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 BUFFER_SIZE = 32
