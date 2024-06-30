@@ -6,7 +6,7 @@
 /*   By: trosinsk <trosinsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 06:56:35 by trosinsk          #+#    #+#             */
-/*   Updated: 2024/06/28 00:53:38 by trosinsk         ###   ########.fr       */
+/*   Updated: 2024/06/30 16:33:22 by trosinsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 #  define OPEN_MAX 1024
 # endif
 
-# include "../../libft/include/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>

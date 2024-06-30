@@ -6,7 +6,7 @@
 /*   By: trosinsk <trosinsk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:37:39 by trosinsk          #+#    #+#             */
-/*   Updated: 2024/06/28 01:00:03 by trosinsk         ###   ########.fr       */
+/*   Updated: 2024/07/01 00:28:56 by trosinsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ char	*line_maker(char *str)
 		return (NULL);
 	return (new_line);
 }
-
 
 char	*get_next_line(int fd)
 {
